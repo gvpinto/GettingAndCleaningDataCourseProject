@@ -205,29 +205,9 @@ tidyData <- spreadData %>%
 
 str(tidyData)
 head(tidyData, 100)
+
+## Write to a File the Second Tidy Dataset.
 write.table(tidyData, file="./data/TidyData-Avg.txt", row.names = FALSE)
 
-unique(tidyData$Activity)
+
 ##---------------------------- END ------------------------------------------------------##
-
-##CodeBook
-
-library(memisc)
-
-codeBookData <- within(tidyData, {
-    
-    description(Activity) <- "Activity Performed by the Subject"
-    wording(Activity) <- "Various Activities include Walking, Walking Upstairs, Walking Down Stairs, Sitting, Standing and Laying"
-    
-    labels(Activity) <- c(
-        "WALKING"               = 1,
-        "WALKING_UPSTAIRS"      = 2,
-        "WALKING_DOWNSTAIRS"    = 3,
-        "SITTING"               = 4,
-        "STANDING"              = 5,
-        "LAYING"                = 6
-        )
-    
-})
-
-codebook(codeBookData)
