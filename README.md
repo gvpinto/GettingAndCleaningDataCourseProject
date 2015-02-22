@@ -32,7 +32,7 @@
 * Variables are stored in both rows and columns. Spread the Measurement back into columns to show it as Mean and Standard Deviation
 
 ## Step 7.
-* Create a second Tidy data that will provide averages for each variable for each activity and each subject 
+* Create a second Tidy data that will provide averages for each variable for each activity and each subject and write it to a file
 
 
 
